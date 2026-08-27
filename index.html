@@ -4,6 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>From an Island To an Island — Josh Wong</title>
+<meta name="description" content="A third-culture kid's dialogues with self and others on identity, belonging, and the way forward. From Josh Wong, with contributor Ivan Okello. Coming Fall 2026.">
+
+<!-- Social share previews (Facebook, iMessage, Slack, etc). Requires cover-share.jpg
+     to be uploaded in the same folder as this file. -->
+<meta property="og:type" content="book">
+<meta property="og:title" content="From an Island To an Island — Josh Wong">
+<meta property="og:description" content="A third-culture kid's dialogues with self and others on identity, belonging, and the way forward. Coming Fall 2026.">
+<meta property="og:image" content="cover-share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="628">
+
+<!-- X / Twitter share previews -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="From an Island To an Island — Josh Wong">
+<meta name="twitter:description" content="A third-culture kid's dialogues with self and others on identity, belonging, and the way forward. Coming Fall 2026.">
+<meta name="twitter:image" content="cover-share.jpg">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23122e38'/%3E%3Cpath d='M20 40 C18 30 26 20 34 22 C42 24 46 34 40 42 C34 50 22 48 20 40 Z' fill='%23e0a84e'/%3E%3C/svg%3E" type="image/svg+xml">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500;1,9..144,600&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -237,6 +256,37 @@
     font-size:1.3rem; color:var(--ink); max-width:22ch;
   }
 
+  /* EXCERPT */
+  .excerpt{background:var(--paper);}
+  .excerpt-title{
+    font-family:'Fraunces', serif; font-style:italic; font-weight:500;
+    font-size:clamp(1.4rem,3.2vw,2rem); margin:1rem 0 2rem; color:var(--ink);
+  }
+  .excerpt-page{
+    background:var(--fog);
+    border-left:3px solid var(--gold);
+    padding:clamp(1.5rem,4vw,2.4rem);
+    max-width:600px;
+    border-radius:2px;
+  }
+  .excerpt-page p{
+    font-family:'Fraunces', serif; font-size:1.03rem; line-height:1.75;
+    color:#2c3a40; margin-bottom:1.1rem;
+  }
+  .excerpt-page p:last-child{margin-bottom:0;}
+  .excerpt-page .excerpt-ellipsis{
+    text-align:center; color:var(--slate); font-family:'IBM Plex Mono', monospace;
+    letter-spacing:0.3em; margin:1.3rem 0; font-size:0.9rem;
+  }
+  .excerpt-page strong{color:var(--ink);}
+  .excerpt-cta{
+    margin-top:1.8rem; display:flex; align-items:center; gap:1.2rem; flex-wrap:wrap;
+  }
+  .excerpt-cta span{
+    font-family:'IBM Plex Mono', monospace; font-size:0.72rem; color:var(--slate);
+    letter-spacing:0.03em;
+  }
+
   /* VOYAGE / SIGNATURE */
   .voyage{
     background:var(--harbor-deep);
@@ -386,6 +436,19 @@
     display:none; font-family:'IBM Plex Mono', monospace; font-size:0.85rem;
     color:var(--gold); margin-top:1rem; letter-spacing:0.03em;
   }
+  .share-row{
+    margin-top:2.4rem; padding-top:1.6rem; border-top:1px solid rgba(238,232,218,0.16);
+    display:flex; gap:1.1rem; align-items:center; justify-content:center; flex-wrap:wrap;
+    font-family:'IBM Plex Mono', monospace; font-size:0.72rem; letter-spacing:0.06em;
+    text-transform:uppercase;
+  }
+  .share-row .share-label{color:var(--slate);}
+  .share-row a, .share-row button{
+    color:var(--fog-2); text-decoration:none; background:none; border:none;
+    font-family:inherit; font-size:inherit; letter-spacing:inherit; text-transform:inherit;
+    cursor:pointer; padding:0; transition:color .2s ease;
+  }
+  .share-row a:hover, .share-row button:hover{color:var(--gold);}
 
   /* FOOTER */
   footer{
@@ -436,6 +499,7 @@
       L88.8,8.6 L88.8,7.5 L85.4,8.1 L85.2,6.2 L82.0,4.3 Z"/></svg>Island</div>
   <nav>
     <a href="#premise">Premise</a>
+    <a href="#excerpt">Excerpt</a>
     <a href="#voyage">The Journey</a>
     <a href="#about">Author</a>
     <a href="#gallery">Gallery</a>
@@ -505,6 +569,27 @@
         <p>During a sabbatical year in Taiwan, Josh (Buddy) reflects on identity, belonging, faith, grief, and the search for "the way" — through conversations with friends, fellow travellers, and those who call Taiwan home.</p>
         <p>Part travel memoir, part dialogue, it follows a third-culture kid's search for meaning, belonging, and a sense of home. Will he find "the way" by the end of his sabbatical?</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="excerpt" id="excerpt">
+  <div class="section-inner reveal">
+    <div class="eyebrow" style="color:var(--coral)">
+      <style>.excerpt .eyebrow::before{background:var(--coral);}</style>
+      An excerpt from the book
+    </div>
+    <h2 class="excerpt-title">Chapter One — "Do you know the way?"</h2>
+    <div class="excerpt-page">
+      <p>This happens to be one of the inside jokes between Ivan Okello and me since the summer of 2018 in Blomidon, Nova Scotia. At that time, Ivan had been in Canada for about a year, while I had also recently moved from Newfoundland to Nova Scotia. During that period, a meme — the Ugandan Knuckles meme — was going viral online, with the phrase "Do you know de wae?" I can't quite remember who started the joke between us, but we both found it funny and often repeated it to each other.</p>
+      <p>Although it was a light-hearted joke, the question lingered: do we actually know "the way" in our lives? What is "the way," anyway? Is it the path that others expect us to follow — getting into a good university, securing a stable job, finding a partner, buying a home, and raising children? Is that "the way"? Or are there other paths we can take?</p>
+      <p class="excerpt-ellipsis">···</p>
+      <p>Will I find "the way" by the end of this sabbatical? Probably not.</p>
+      <p><strong>But at least I tried.</strong></p>
+    </div>
+    <div class="excerpt-cta">
+      <span>— from the opening chapter</span>
+      <a href="#notify" class="btn btn-solid">Preorder to read the rest</a>
     </div>
   </div>
 </section>
@@ -665,6 +750,13 @@
       <a href="https://www.instagram.com/buddyoverder/" target="_blank" rel="noopener" class="btn btn-ghost">Follow on Instagram</a>
     </div>
 
+    <div class="share-row">
+      <span class="share-label">Share this page</span>
+      <a href="#" id="shareX" target="_blank" rel="noopener">X</a>
+      <a href="#" id="shareFacebook" target="_blank" rel="noopener">Facebook</a>
+      <button type="button" id="shareCopy">Copy link</button>
+    </div>
+
   </div>
 </section>
 
@@ -698,6 +790,22 @@
     // Let the form actually submit to Mailchimp (opens in a new tab);
     // just show a quick confirmation note on this page too.
     thanks.style.display = 'block';
+  });
+
+  // Share links — built from wherever this page actually ends up hosted.
+  const shareUrl = encodeURIComponent(window.location.href);
+  const shareText = encodeURIComponent('From an Island To an Island — a third-culture kid\'s dialogues on identity, belonging, and the way forward. Coming Fall 2026.');
+  const shareX = document.getElementById('shareX');
+  const shareFacebook = document.getElementById('shareFacebook');
+  const shareCopy = document.getElementById('shareCopy');
+  if (shareX) shareX.href = `https://twitter.com/intent/tweet?text=${shareText}&url=${shareUrl}`;
+  if (shareFacebook) shareFacebook.href = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`;
+  if (shareCopy) shareCopy.addEventListener('click', () => {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      const original = shareCopy.textContent;
+      shareCopy.textContent = 'Copied!';
+      setTimeout(() => { shareCopy.textContent = original; }, 1800);
+    });
   });
 </script>
 
