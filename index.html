@@ -107,6 +107,36 @@
     border:1px solid var(--fog); padding:0.5em 1em; border-radius:2px;
     text-transform:uppercase;
   }
+  .nav-toggle{
+    display:none; flex-direction:column; justify-content:center; gap:5px;
+    width:28px; height:22px; background:none; border:none; cursor:pointer;
+    padding:0;
+  }
+  .nav-toggle span{
+    display:block; width:100%; height:2px; background:var(--fog);
+    transition:transform .25s ease, opacity .25s ease;
+  }
+  .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0;}
+  .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+  @media (max-width:880px){
+    .nav-toggle{display:flex;}
+    header.nav nav{
+      position:fixed; top:0; right:0; bottom:0; left:0;
+      background:rgba(18,30,37,0.98); backdrop-filter:blur(6px);
+      flex-direction:column; align-items:flex-start; justify-content:center;
+      gap:1.6rem; padding:2rem clamp(1.5rem,8vw,3rem);
+      transform:translateX(100%); opacity:0; visibility:hidden;
+      transition:transform .35s ease, opacity .35s ease, visibility 0s linear .35s;
+    }
+    header.nav nav.open{
+      transform:translateX(0); opacity:1; visibility:visible;
+      transition:transform .35s ease, opacity .35s ease, visibility 0s linear 0s;
+    }
+    header.nav nav a{font-size:1.1rem;}
+    header.nav .nav-cta{margin-top:0.4rem;}
+    .lang-switch{margin:0.2rem 0;}
+  }
   .lang-switch{
     display:flex; gap:0.3rem; border:1px solid rgba(238,232,218,0.3);
     border-radius:3px; padding:2px;
@@ -520,7 +550,10 @@
       L80.5,75.7 L80.3,66.3 L82.2,65.7 L82.6,61.4 L87.8,56.7 L89.0,48.5 L92.5,43.1 L92.7,39.1 L94.0,38.8 L94.2,37.6
       L91.2,37.3 L89.7,27.5 L91.2,24.0 L94.2,22.1 L94.4,20.0 L97.4,17.8 L99.8,17.8 L99.8,15.0 L95.1,14.6 L95.7,10.5
       L88.8,8.6 L88.8,7.5 L85.4,8.1 L85.2,6.2 L82.0,4.3 Z"/></svg>Island</div>
-  <nav>
+  <button type="button" class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="siteNavLinks">
+    <span></span><span></span><span></span>
+  </button>
+  <nav id="siteNavLinks">
     <a href="#premise" data-i18n="nav.premise">Premise</a>
     <a href="#excerpt" data-i18n="nav.excerpt">Excerpt</a>
     <a href="#voyage" data-i18n="nav.journey">The Journey</a>
@@ -530,6 +563,7 @@
       <button type="button" class="lang-btn active" data-lang="en">EN</button>
       <button type="button" class="lang-btn" data-lang="zh">中文</button>
       <button type="button" class="lang-btn" data-lang="pt">PT</button>
+      <button type="button" class="lang-btn" data-lang="fr">FR</button>
     </span>
     <a href="https://www.instagram.com/buddyoverder/" target="_blank" rel="noopener">Instagram</a>
     <a href="#notify" class="nav-cta" data-i18n="nav.notify">Get notified</a>
@@ -913,6 +947,44 @@
       "notify.preorder":"Reservar na Amazon.ca","notify.contact":"Contatar o autor","notify.instagram":"Seguir no Instagram",
       "notify.shareLabel":"Compartilhar esta página","notify.shareCopy":"Copiar link",
       "footer.copy":"© 2026 Josh Wong. Colaborador: Ivan Okello."
+    },
+    fr: {
+      "nav.premise":"Prémisse","nav.excerpt":"Extrait","nav.journey":"Le voyage","nav.author":"Auteur","nav.gallery":"Galerie","nav.notify":"Être averti",
+      "hero.tag":"Sortie à l'automne 2026",
+      "hero.subtitle":"Les dialogues d'un enfant de la troisième culture avec lui-même et avec les autres, sur l'identité, l'appartenance et le chemin à suivre.",
+      "hero.byline":"Josh Wong · avec la contribution d'Ivan Okello",
+      "hero.preorder":"Précommander sur Amazon","hero.notify":"Être averti à la sortie","hero.scroll":"Défiler",
+      "premise.eyebrow":"La question à l'origine de tout","premise.heading":"Connais-tu le chemin ?",
+      "premise.photoCap":"St. John's, Terre-Neuve — là où tout a commencé",
+      "premise.p1":"Ce qui avait commencé comme une blague entre amis est devenu une question bien plus profonde : connaissons-nous vraiment le « chemin » de nos vies ?",
+      "premise.p2":"Est-ce le chemin que les autres attendent de nous — faire des études, bâtir une carrière, trouver un partenaire, acheter une maison, et s'installer dans une vie qui paraît certaine ?",
+      "premise.p3":"Pendant une année sabbatique à Taïwan, Josh (Buddy) réfléchit à l'identité, à l'appartenance, à la foi, au deuil, et cherche « le chemin » à travers des conversations avec des amis, d'autres voyageurs, et des personnes qui considèrent Taïwan comme chez elles.",
+      "premise.p4":"À mi-chemin entre le récit de voyage et le dialogue, ce livre suit la quête de sens, d'appartenance et de foyer d'un enfant de la troisième culture. Trouvera-t-il « le chemin » avant la fin de son année sabbatique ?",
+      "excerpt.eyebrow":"Un extrait du livre","excerpt.title":"Chapitre un — « Connais-tu le chemin ? »",
+      "excerpt.note":"Cet extrait est présenté en anglais, la langue originale du livre.",
+      "excerpt.cta":"— extrait du chapitre d'ouverture","excerpt.button":"Précommander pour lire la suite",
+      "voyage.eyebrow":"Deux îles, une question commune",
+      "voyage.heading":"L'itinéraire de ce livre, à travers la distance qui les sépare.",
+      "voyage.portNL":"ÎLE DE TERRE-NEUVE","voyage.coordNL":"St. John's, TN — 47,56°N, 52,71°O — l'un des foyers de Josh",
+      "voyage.portTW":"ÎLE DE TAÏWAN","voyage.coordTW":"Taipei — 25,03°N, 121,57°E — année sabbatique",
+      "voyage.themeIdentity":"Identité","voyage.themeBelonging":"Appartenance","voyage.themeFaith":"Foi","voyage.themeGrief":"Deuil","voyage.themeWay":"Le chemin",
+      "voyage.note":"Les deux îles ont été retracées pixel par pixel à partir de photos de référence.",
+      "about.eyebrow":"À propos des voix derrière le livre",
+      "about.photoCap":"Josh Wong (à gauche) et Ivan Okello — auteur et contributeur",
+      "about.joshRole":"Auteur",
+      "about.joshBio":"Un enfant canadien de la troisième culture et polyglotte, avec des attaches à Terre-Neuve, en Nouvelle-Écosse et à Hong Kong. En 2025, Josh a pris une année sabbatique pour réfléchir à l'identité, à l'appartenance et au chemin. Il aime « faire la fête » lors d'une kitchen party sur fond de musique terre-neuvienne, et se perdre joyeusement dans un marché de nuit de Taipei avec des amis et de la bonne nourriture. C'est son premier livre.",
+      "about.ivanRole":"Contributeur",
+      "about.ivanBio":"Ivan a grandi en Ouganda avant de s'installer au Canada atlantique, où il a fait ses études à l'Université Makerere et à l'Université Dalhousie. Ami de longue date de Josh, Ivan aime voyager, rencontrer des personnes de cultures différentes et les conversations profondes. Il anime le podcast Dear Lads, disponible sur Spotify et Apple Podcasts.",
+      "gallery.eyebrow":"Quelques images de la route","gallery.heading":"Chemins découverts.",
+      "gallery.cap1":"Île de Qimei, comté de Penghu — un barrage de pierre en forme de cœur","gallery.cap2":"Taipei au crépuscule","gallery.cap3":"Coucher de soleil sur Taipei",
+      "gallery.cap4":"Un arc-en-ciel à Sanzhi, Nouveau Taipei","gallery.cap5":"Plage de Fulong","gallery.cap6":"Plage de Fulong","gallery.cap7":"Île de Wan'an, comté de Penghu",
+      "notify.eyebrow":"Sortie à l'automne 2026","notify.heading":"Précommandez, ou prenez contact.",
+      "notify.lead":"« From an Island To an Island » sortira à l'automne 2026 en version numérique et papier au Canada. Inscrivez-vous à la liste pour être averti à la sortie, précommandez dès maintenant, ou contactez Josh directement.",
+      "notify.button":"Rejoindre la liste",
+      "notify.thanks":"Merci — vérifiez le nouvel onglet ouvert pour confirmer votre inscription.",
+      "notify.preorder":"Précommander sur Amazon.ca","notify.contact":"Contacter l'auteur","notify.instagram":"Suivre sur Instagram",
+      "notify.shareLabel":"Partager cette page","notify.shareCopy":"Copier le lien",
+      "footer.copy":"© 2026 Josh Wong. Contributeur : Ivan Okello."
     }
   };
 
@@ -932,6 +1004,21 @@
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.addEventListener('click', () => applyLang(btn.dataset.lang));
   });
+
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('siteNavLinks');
+  if (navToggle && navLinks) {
+    const closeMenu = () => {
+      navLinks.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    };
+    navToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+  }
 
   let savedLang = 'en';
   try { savedLang = localStorage.getItem('site-lang') || 'en'; } catch(e) {}
