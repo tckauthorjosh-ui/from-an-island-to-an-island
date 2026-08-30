@@ -5,6 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>From an Island To an Island — Josh Wong</title>
 <meta name="description" content="A third-culture kid's dialogues with self and others on identity, belonging, and the way forward. From Josh Wong, with contributor Ivan Okello. Coming September 4, 2026.">
+<link rel="canonical" href="https://tckauthorjosh-ui.github.io/from-an-island-to-an-island/">
+
+<!-- Structured data so Google can show this as a Book result -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "From an Island to an Island: Buddy Slowly Finds His Way",
+  "author": { "@type": "Person", "name": "Josh Wong" },
+  "contributor": { "@type": "Person", "name": "Ivan Okello" },
+  "description": "A third-culture kid's dialogues with self and others on identity, belonging, and the way forward.",
+  "datePublished": "2026-09-04",
+  "inLanguage": "en",
+  "isbn": "978-1-0680076-0-6",
+  "workExample": [
+    { "@type": "Book", "isbn": "978-1-0680076-0-6", "bookFormat": "https://schema.org/Paperback" },
+    { "@type": "Book", "isbn": "978-1-0680076-1-3", "bookFormat": "https://schema.org/EBook" }
+  ],
+  "url": "https://tckauthorjosh-ui.github.io/from-an-island-to-an-island/",
+  "image": "https://tckauthorjosh-ui.github.io/from-an-island-to-an-island/cover-share.jpg"
+}
+</script>
 
 <!-- Social share previews (Facebook, iMessage, Slack, etc). Requires cover-share.jpg
      to be uploaded in the same folder as this file. -->
@@ -103,6 +125,7 @@
     text-decoration:none; opacity:0.85; text-transform:uppercase;
     transition:opacity .2s ease; touch-action:manipulation;
   }
+  .nav-ig, .footer-ig{display:inline-flex; align-items:center; gap:0.4em;}
   @media (hover:hover) and (pointer:fine){
     header.nav nav a:hover{opacity:1; color:var(--gold);}
   }
@@ -275,9 +298,16 @@
   }
   .btn-solid{background:var(--gold); color:var(--ink);}
   .btn-ghost{border-color:var(--fog); color:var(--fog);}
+  .btn-instagram{
+    background:linear-gradient(135deg, #f9ce34, #ee2a7b, #6228d7);
+    color:#fff; gap:0.55em; font-weight:600;
+    box-shadow:0 2px 10px rgba(238,42,123,0.25);
+  }
+  .ig-icon{width:16px; height:16px; flex-shrink:0;}
   @media (hover:hover) and (pointer:fine){
     .btn-solid:hover{transform:translateY(-2px); background:#eebb66;}
     .btn-ghost:hover{transform:translateY(-2px); background:rgba(238,232,218,0.08);}
+    .btn-instagram:hover{transform:translateY(-2px); box-shadow:0 4px 16px rgba(238,42,123,0.4); filter:brightness(1.08);}
   }
   .btn:active{transform:scale(0.97);}
 
@@ -602,7 +632,10 @@
       <button type="button" class="lang-btn" data-lang="pt">PT</button>
       <button type="button" class="lang-btn" data-lang="fr">FR</button>
     </span>
-    <a href="https://www.instagram.com/buddyoverder/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.instagram.com/buddyoverder/" target="_blank" rel="noopener" class="nav-ig">
+      <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
+      Instagram
+    </a>
     <a href="#notify" class="nav-cta" data-i18n="nav.notify">Get notified</a>
   </nav>
 </header>
@@ -851,7 +884,10 @@
     <div class="cta-row" style="justify-content:center; margin-top:1.8rem;">
       <a href="https://www.amazon.ca/s?k=From+an+Island+To+an+Island+Josh+Wong" target="_blank" rel="noopener" class="btn btn-ghost" data-i18n="notify.preorder">Preorder on Amazon.ca</a>
       <a href="mailto:tckauthorjosh@gmail.com?subject=Hello%20Josh" class="btn btn-ghost" data-i18n="notify.contact">Contact the author</a>
-      <a href="https://www.instagram.com/buddyoverder/" target="_blank" rel="noopener" class="btn btn-ghost" data-i18n="notify.instagram">Follow on Instagram</a>
+      <a href="https://www.instagram.com/buddyoverder/" target="_blank" rel="noopener" class="btn btn-instagram">
+        <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
+        <span data-i18n="notify.instagram">Follow on Instagram</span>
+      </a>
     </div>
 
     <div class="share-row">
@@ -866,7 +902,10 @@
 
 <footer>
   <div class="word">From an Island To an Island</div>
-  <div><span data-i18n="footer.copy">© 2026 Josh Wong. Contributor: Ivan Okello.</span> <a href="https://www.instagram.com/buddyoverder/" target="_blank" rel="noopener" style="color:var(--fog);">Instagram</a></div>
+  <div><span data-i18n="footer.copy">© 2026 Josh Wong. Contributor: Ivan Okello.</span> <a href="https://www.instagram.com/buddyoverder/" target="_blank" rel="noopener" class="footer-ig" style="color:var(--fog);">
+    <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
+    Instagram
+  </a></div>
 </footer>
 
 <script>
