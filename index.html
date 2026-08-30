@@ -458,6 +458,20 @@
   }
   .person-photo img{width:100%; height:100%; object-fit:cover; display:block;}
   @media (max-width:820px){ .people-grid{grid-template-columns:1fr;} .person-card{max-width:320px;} }
+
+  .podcast-embed{
+    margin-top:clamp(2.5rem,5vw,3.5rem);
+    padding-top:clamp(2rem,4vw,2.8rem);
+    border-top:1px solid var(--line);
+    max-width:600px;
+  }
+  .podcast-title{
+    font-family:'Fraunces', serif; font-style:italic; font-weight:500;
+    font-size:clamp(1.2rem,2.6vw,1.5rem); margin:0.9rem 0 0.6rem; color:var(--ink);
+  }
+  .podcast-lead{color:#3a4750; margin-bottom:1.3rem; line-height:1.6; max-width:56ch;}
+  .spotify-frame{display:block; border-radius:12px;}
+
   .about-grid{
     display:grid; grid-template-columns: 0.5fr 1.5fr; gap:clamp(1.5rem,4vw,3rem);
     align-items:start;
@@ -822,6 +836,16 @@
         </div>
       </div>
     </div>
+
+    <div class="podcast-embed">
+      <div class="eyebrow" style="color:var(--harbor)">
+        <style>.podcast-embed .eyebrow::before{background:var(--harbor);}</style>
+        <span data-i18n="podcast.eyebrow">Hear more from us</span>
+      </div>
+      <h3 class="podcast-title" data-i18n="podcast.title">Josh &amp; Ivan on Dear Lads</h3>
+      <p class="podcast-lead" data-i18n="podcast.lead">A bonus episode of Ivan's podcast where the two of us talk about how we met, and building a friendship across changing addresses, careers, and identities.</p>
+      <iframe class="spotify-frame" src="https://open.spotify.com/embed/episode/3xLNSALvPzV9UD4e8YNZ8c?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Bonus Episode: Ivan and Friends - Part 1, Dear Lads with Ivan Okello"></iframe>
+    </div>
   </div>
 </section>
 
@@ -937,6 +961,8 @@
       "about.joshBio":"A Canadian third-culture kid and polyglot with ties in Newfoundland, Nova Scotia, and Hong Kong. In 2025, Josh went on a gap year to reflect on identity, belonging, and the way. He enjoys \"having a time\" at a kitchen party with Newfoundland music, and getting happily lost in a Taipei night market with friends and food. This is his first book.",
       "about.ivanRole":"Contributor",
       "about.ivanBio":"Ivan grew up in Uganda before relocating to Atlantic Canada, completing his education at Makerere University and Dalhousie University. A longtime friend of Josh, Ivan enjoys travelling, meeting people from different cultures, and thoughtful conversation. He hosts the podcast Dear Lads, available on Spotify and Apple Podcasts.",
+      "podcast.eyebrow":"Hear more from us","podcast.title":"Josh & Ivan on Dear Lads",
+      "podcast.lead":"A bonus episode of Ivan's podcast where the two of us talk about how we met, and building a friendship across changing addresses, careers, and identities.",
       "gallery.eyebrow":"A few frames from the road","gallery.heading":"Paths discovered.",
       "gallery.cap1":"Qimei Island, Penghu County","gallery.cap2":"Taipei at dusk","gallery.cap3":"Sunset over Taipei",
       "gallery.cap4":"A rainbow in Sanzhi, New Taipei","gallery.cap5":"Fulong Beach","gallery.cap6":"Fulong Beach","gallery.cap7":"Wan'an Island, Penghu County",
@@ -975,6 +1001,8 @@
       "about.joshBio":"喬許是一位加拿大第三文化孩子,通曉多國語言,與紐芬蘭、新斯科細亞省及香港都有淵源。2025年,喬許展開一年的休假,反思身分認同、歸屬感與人生方向。他喜歡在紐芬蘭音樂伴奏下的廚房派對「玩得盡興」,也喜歡和朋友一起在台北夜市裡開心地迷路、大快朵頤。這是他的第一本書。",
       "about.ivanRole":"供稿人",
       "about.ivanBio":"伊凡在烏干達長大,後移居加拿大大西洋省份,先後於馬凱雷雷大學及達爾豪斯大學完成學業。他是喬許多年的好友,喜愛旅行、結識不同文化背景的人,以及深度的對話。他主持 Podcast 節目《Dear Lads》,可在 Spotify 與 Apple Podcasts 上收聽。",
+      "podcast.eyebrow":"更多內容","podcast.title":"喬許與伊凡作客《Dear Lads》",
+      "podcast.lead":"這是伊凡 Podcast 節目的一集特別企劃,兩人聊聊如何相識,以及在不斷變換的住址、職涯與身分認同之間,如何維繫這段友誼。",
       "gallery.eyebrow":"旅途中的幾個片段","gallery.heading":"尋見的路徑。",
       "gallery.cap1":"澎湖縣七美島——心型石滬","gallery.cap2":"台北的黃昏","gallery.cap3":"台北的日落",
       "gallery.cap4":"新北市三芝的彩虹","gallery.cap5":"福隆海灘","gallery.cap6":"福隆海灘","gallery.cap7":"澎湖縣望安島",
@@ -988,8 +1016,8 @@
     },
     pt: {
       "nav.premise":"Premissa","nav.excerpt":"Trecho","nav.journey":"A Jornada","nav.author":"Autor","nav.gallery":"Galeria","nav.notify":"Avise-me",
-      "hero.tag":"Lançamento em 4 de setembro de 2026",
-      "hero.subtitle":"Os diálogos de um filho da terceira cultura consigo mesmo e com os outros sobre identidade, pertencimento e o caminho a seguir.",
+      "hero.tag":"Lançamento no dia 4 de Setembro",
+      "hero.subtitle":"Os diálogos de uma pessoa de terceira cultura consigo mesma e com os outros sobre identidade, pertencimento e o caminho a seguir.",
       "hero.byline":"Josh Wong · com o contributo de Ivan Okello",
       "hero.preorder":"Reservar na Amazon","hero.notify":"Avise-me no lançamento","hero.scroll":"Deslize",
       "premise.eyebrow":"A pergunta que deu início a tudo","premise.heading":"Você sabe qual é o caminho?",
@@ -997,7 +1025,7 @@
       "premise.p1":"O que começou como uma piada entre amigos acabou se tornando uma pergunta muito mais profunda: será que realmente sabemos qual é o \"caminho\" da vida?",
       "premise.p2":"Seria o caminho que os outros esperam que sigamos — ir para a universidade, construir uma carreira, encontrar um parceiro, comprar uma casa e se estabelecer numa vida aparentemente certa?",
       "premise.p3":"Durante um ano sabático em Taiwan, Josh (Buddy) reflete sobre identidade, pertencimento, fé e luto, e busca \"o caminho\" através de conversas com amigos, outros viajantes e pessoas que chamam Taiwan de lar.",
-      "premise.p4":"Parte memórias de viagem, parte diálogo, o livro acompanha a busca de um filho da terceira cultura por sentido, pertencimento e um lugar para chamar de lar. Será que ele encontra \"o caminho\" até o fim do seu sabático?",
+      "premise.p4":"Parte memórias de viagem, parte diálogo, o livro acompanha a busca de uma pessoa de terceira cultura por sentido, pertencimento e um lugar para chamar de lar. Será que ele encontra \"o caminho\" até o fim do seu sabático?",
       "excerpt.eyebrow":"Um trecho do livro","excerpt.title":"Capítulo Um — \"Você sabe qual é o caminho?\"",
       "excerpt.note":"Este trecho está em inglês, o idioma original do livro.",
       "excerpt.cta":"— do capítulo de abertura","excerpt.button":"Reserve para ler o resto",
@@ -1010,13 +1038,15 @@
       "about.eyebrow":"Sobre as vozes por trás do livro",
       "about.photoCap":"Josh Wong (esquerda) e Ivan Okello — autor e colaborador",
       "about.joshRole":"Autor",
-      "about.joshBio":"Um filho canadense da terceira cultura e poliglota, com raízes na Terra Nova, na Nova Escócia e em Hong Kong. Em 2025, Josh tirou um ano sabático para refletir sobre identidade, pertencimento e o caminho. Ele gosta de \"curtir\" uma kitchen party ao som da música da Terra Nova, e de se perder feliz num mercado noturno de Taipé com amigos e boa comida. Este é o seu primeiro livro.",
+      "about.joshBio":"Uma pessoa canadense de terceira cultura e poliglota, com raízes na Terra Nova, na Nova Escócia e em Hong Kong. Em 2025, Josh tirou um ano sabático para refletir sobre identidade, pertencimento e o caminho. Ele gosta de \"curtir\" uma kitchen party ao som da música da Terra Nova, e de se perder feliz num mercado noturno de Taipé com amigos e boa comida. Este é o seu primeiro livro.",
       "about.ivanRole":"Colaborador",
       "about.ivanBio":"Ivan cresceu em Uganda antes de se mudar para o Canadá Atlântico, concluindo os estudos na Universidade Makerere e na Universidade Dalhousie. Amigo de longa data de Josh, Ivan gosta de viajar, conhecer pessoas de diferentes culturas e conversas profundas. Ele apresenta o podcast Dear Lads, disponível no Spotify e no Apple Podcasts.",
+      "podcast.eyebrow":"Ouça mais de nós","podcast.title":"Josh e Ivan no Dear Lads",
+      "podcast.lead":"Um episódio bônus do podcast do Ivan, onde os dois conversam sobre como se conheceram e como construíram uma amizade através de mudanças de endereço, carreiras e identidades.",
       "gallery.eyebrow":"Alguns momentos da estrada","gallery.heading":"Caminhos descobertos.",
       "gallery.cap1":"Ilha de Qimei, Condado de Penghu — um açude de pedra em formato de coração","gallery.cap2":"Taipé ao entardecer","gallery.cap3":"Pôr do sol sobre Taipé",
       "gallery.cap4":"Um arco-íris em Sanzhi, Novo Taipé","gallery.cap5":"Praia de Fulong","gallery.cap6":"Praia de Fulong","gallery.cap7":"Ilha de Wan'an, Condado de Penghu",
-      "notify.eyebrow":"Lançamento em 4 de setembro de 2026","notify.heading":"Reserve, ou entre em contato.",
+      "notify.eyebrow":"Lançamento no dia 4 de Setembro","notify.heading":"Reserve, ou entre em contato.",
       "notify.lead":"\"From an Island To an Island\" será lançado em 4 de setembro de 2026 como ebook e livro físico no Canadá. Entre na lista para receber um aviso no lançamento, reserve agora ou fale diretamente com Josh.",
       "notify.button":"Entrar na lista",
       "notify.thanks":"Obrigado — confira a nova aba que abriu para confirmar sua inscrição.",
@@ -1051,6 +1081,8 @@
       "about.joshBio":"Un enfant canadien de la troisième culture et polyglotte, avec des attaches à Terre-Neuve, en Nouvelle-Écosse et à Hong Kong. En 2025, Josh a pris une année sabbatique pour réfléchir à l'identité, à l'appartenance et au chemin. Il aime « faire la fête » lors d'une kitchen party sur fond de musique terre-neuvienne, et se perdre joyeusement dans un marché de nuit de Taipei avec des amis et de la bonne nourriture. C'est son premier livre.",
       "about.ivanRole":"Contributeur",
       "about.ivanBio":"Ivan a grandi en Ouganda avant de s'installer au Canada atlantique, où il a fait ses études à l'Université Makerere et à l'Université Dalhousie. Ami de longue date de Josh, Ivan aime voyager, rencontrer des personnes de cultures différentes et les conversations profondes. Il anime le podcast Dear Lads, disponible sur Spotify et Apple Podcasts.",
+      "podcast.eyebrow":"En savoir plus sur nous","podcast.title":"Josh et Ivan sur Dear Lads",
+      "podcast.lead":"Un épisode bonus du podcast d'Ivan, où nous parlons de notre rencontre et de la construction de notre amitié à travers les changements d'adresse, de carrière et d'identité.",
       "gallery.eyebrow":"Quelques images de la route","gallery.heading":"Chemins découverts.",
       "gallery.cap1":"Île de Qimei, comté de Penghu — un barrage de pierre en forme de cœur","gallery.cap2":"Taipei au crépuscule","gallery.cap3":"Coucher de soleil sur Taipei",
       "gallery.cap4":"Un arc-en-ciel à Sanzhi, Nouveau Taipei","gallery.cap5":"Plage de Fulong","gallery.cap6":"Plage de Fulong","gallery.cap7":"Île de Wan'an, comté de Penghu",
