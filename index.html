@@ -564,31 +564,12 @@
   .notify .section-inner{max-width:640px;}
   .notify h2{font-size:clamp(1.8rem,4.4vw,2.7rem); margin:1rem 0 1rem;}
   .notify p.lead{color:var(--fog-2); max-width:44ch; margin:0 auto 2.2rem; font-size:1.02rem;}
-  .notify-form{
-    display:flex; gap:0.7rem; flex-wrap:wrap; justify-content:center;
-    max-width:460px; margin:0 auto;
-  }
-  .notify-form input[type=email]{
-    flex:1 1 220px;
-    padding:0.95em 1.1em;
-    border:1px solid rgba(238,232,218,0.35);
-    background:rgba(238,232,218,0.06);
-    color:var(--fog);
-    border-radius:2px;
-    font-family:'Work Sans', sans-serif;
-    font-size:0.95rem;
-  }
-  .notify-form input::placeholder{color:var(--slate);}
-  .notify-form input:focus, a:focus-visible, button:focus-visible{
+    a:focus-visible, button:focus-visible{
     outline:2px solid var(--gold); outline-offset:2px;
   }
   .notify-note{
     margin-top:1.1rem; font-family:'IBM Plex Mono', monospace;
     font-size:0.72rem; color:var(--slate); letter-spacing:0.03em;
-  }
-  .notify-thanks{
-    display:none; font-family:'IBM Plex Mono', monospace; font-size:0.85rem;
-    color:var(--gold); margin-top:1rem; letter-spacing:0.03em;
   }
   .share-row{
     margin-top:2.4rem; padding-top:1.6rem; border-top:1px solid rgba(238,232,218,0.16);
@@ -715,8 +696,8 @@
     <p class="subtitle" data-i18n="hero.subtitle">A third-culture kid's dialogues with self and others on identity, belonging, and the way forward.</p>
     <div class="byline" data-i18n="hero.byline">Josh Wong · with contributor Ivan Okello</div>
     <div class="cta-row">
-      <a href="https://www.amazon.ca/dp/B0HDSDGK76" target="_blank" rel="noopener" class="btn btn-solid" data-i18n="hero.preorder">Preorder on Amazon</a>
-      <a href="#notify" class="btn btn-ghost" data-i18n="hero.notify">Get notified at launch</a>
+      <a href="https://www.amazon.ca/dp/B0HDSDGK76" target="_blank" rel="noopener" class="btn btn-solid" data-i18n="hero.preorder">Order Now on Amazon.ca</a>
+      <a href="https://www.amazon.com/dp/1068007605" target="_blank" rel="noopener" class="btn btn-ghost" data-i18n="hero.international">International Orders (Outside of Canada)</a>
     </div>
   </div>
   <div class="scroll-cue" data-i18n="hero.scroll">Scroll</div>
@@ -943,20 +924,11 @@
   <div class="section-inner reveal">
         <div class="eyebrow" style="justify-content:center; color:var(--gold);" data-i18n="notify.eyebrow">Out Now</div>
     <h2 data-i18n="notify.heading">Order now, or get in touch.</h2>
-    <p class="lead" data-i18n="notify.lead">"From an Island To an Island" releases September 4, 2026 as an ebook and physical copy in Canada. Order now, join the list for a note at launch, or reach Josh directly.</p>
-
-    <form class="notify-form" id="notifyForm" action="https://gmail.us11.list-manage.com/subscribe/post?u=16abddba806fd17a474812f2f&amp;id=9ae75f874c" method="post" target="_blank" novalidate>
-      <input type="email" name="EMAIL" required placeholder="you@example.com" aria-label="Email address" id="notifyEmail">
-      <!-- Mailchimp anti-bot honeypot field — must stay hidden from real visitors -->
-      <div style="position:absolute; left:-5000px;" aria-hidden="true">
-        <input type="text" name="b_16abddba806fd17a474812f2f_9ae75f874c" tabindex="-1" value="">
-      </div>
-      <button type="submit" class="btn btn-solid" data-i18n="notify.button">Join the list</button>
-    </form>
-    <div class="notify-thanks" id="notifyThanks" data-i18n="notify.thanks">Thanks — check the new tab that opened to confirm you're on the list.</div>
+    <p class="lead" data-i18n="notify.lead">"From an Island To an Island" released September 4, 2026 as an ebook and physical copy in Canada. Order now, or reach Josh directly.</p>
 
     <div class="cta-row" style="justify-content:center; margin-top:1.8rem;">
       <a href="https://www.amazon.ca/dp/B0HDSDGK76" target="_blank" rel="noopener" class="btn btn-ghost" data-i18n="notify.preorder">Order Now on Amazon.ca</a>
+      <a href="https://www.amazon.com/dp/1068007605" target="_blank" rel="noopener" class="btn btn-ghost" data-i18n="notify.international">International Orders (Amazon.com)</a>
       <a href="mailto:tckauthorjosh@gmail.com?subject=Hello%20Josh" class="btn btn-ghost" data-i18n="notify.contact">Contact the author</a>
       <a href="https://www.instagram.com/buddyoverder/" target="_blank" rel="noopener" class="btn btn-instagram">
         <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
@@ -989,7 +961,7 @@
       "hero.tag":"Out Now",
       "hero.subtitle":"A third-culture kid's dialogues with self and others on identity, belonging, and the way forward.",
       "hero.byline":"Josh Wong · with contributor Ivan Okello",
-      "hero.preorder":"Order Now on Amazon","hero.notify":"Get notified at launch","hero.scroll":"Scroll",
+      "hero.preorder":"Order Now on Amazon.ca","hero.international":"International Orders (Outside of Canada)","hero.scroll":"Scroll",
       "premise.eyebrow":"The question that started it","premise.heading":"Do you know the way?",
       "premise.photoCap":"St. John's, Newfoundland — where the question started",
       "premise.p1":"What began as a lighthearted joke between friends eventually became a much deeper question: do we actually know \"the way\" in our lives?",
@@ -1018,10 +990,8 @@
       "gallery.cap1":"Qimei Island, Penghu County","gallery.cap2":"Taipei at dusk","gallery.cap3":"Sunset over Taipei",
       "gallery.cap4":"A rainbow in Sanzhi, New Taipei","gallery.cap5":"Fulong Beach","gallery.cap6":"Fulong Beach","gallery.cap7":"Wan'an Island, Penghu County","gallery.cap8":"Changhua Railroad Roundhouse","gallery.cap9":"Jianshanjiao Seaview Pavilion","ig.eyebrow":"From Instagram","ig.title":"Follow along",
       "notify.eyebrow":"Out Now","notify.heading":"Order now, or get in touch.",
-      "notify.lead":"\"From an Island To an Island\" releases September 4, 2026 as an ebook and physical copy in Canada. Order now, join the list for a note at launch, or reach Josh directly.",
-      "notify.button":"Join the list",
-      "notify.thanks":"Thanks — check the new tab that opened to confirm you're on the list.",
-      "notify.preorder":"Order Now on Amazon.ca","notify.contact":"Contact the author","notify.instagram":"Follow on Instagram",
+      "notify.lead":"\"From an Island To an Island\" released September 4, 2026 as an ebook and physical copy in Canada. Order now, or reach Josh directly.",
+      "notify.preorder":"Order Now on Amazon.ca","notify.international":"International Orders (Amazon.com)","notify.contact":"Contact the author","notify.instagram":"Follow on Instagram",
       "notify.shareLabel":"Share this page","notify.shareCopy":"Copy link",
       "footer.copy":"© 2026 Josh Wong. Contributor: Ivan Okello."
     },
@@ -1030,7 +1000,7 @@
       "hero.tag":"現已上市",
       "hero.subtitle":"一位第三文化孩子與自己對話,也與他人對話——談身分認同、歸屬感,以及未來的方向。",
       "hero.byline":"Josh Wong 著,與供稿人 Ivan Okello",
-      "hero.preorder":"立即在 Amazon 訂購","hero.notify":"搶先收到上市通知","hero.scroll":"向下捲動",
+      "hero.preorder":"立即在 Amazon.ca 訂購","hero.international":"海外訂購(Amazon.com)","hero.scroll":"向下捲動",
       "premise.eyebrow":"一切的起點","premise.heading":"你知道路怎麼走嗎?",
       "premise.photoCap":"紐芬蘭聖約翰斯——問題開始的地方",
       "premise.p1":"一句朋友間的玩笑話,最終變成了一個更深刻的問題:我們真的知道人生的「路」該怎麼走嗎?",
@@ -1059,10 +1029,8 @@
       "gallery.cap1":"澎湖縣七美島——心型石滬","gallery.cap2":"台北的黃昏","gallery.cap3":"台北的日落",
       "gallery.cap4":"新北市三芝的彩虹","gallery.cap5":"福隆海灘","gallery.cap6":"福隆海灘","gallery.cap7":"澎湖縣望安島","gallery.cap8":"彰化扇形車庫","gallery.cap9":"尖山角觀海亭","ig.eyebrow":"Instagram 動態","ig.title":"追蹤我們",
       "notify.eyebrow":"現已上市","notify.heading":"立即訂購,或與作者聯繫。",
-      "notify.lead":"《From an Island To an Island》將於2026年9月4日以電子書及實體書形式在加拿大上市。立即訂購,加入通知名單,或直接與喬許聯繫。",
-      "notify.button":"加入通知名單",
-      "notify.thanks":"謝謝——請至新開啟的分頁確認訂閱。",
-      "notify.preorder":"立即在 Amazon.ca 訂購","notify.contact":"聯繫作者","notify.instagram":"追蹤 Instagram",
+      "notify.lead":"《From an Island To an Island》已於2026年9月4日以電子書及實體書形式在加拿大上市。立即訂購,或直接與喬許聯繫。",
+      "notify.preorder":"立即在 Amazon.ca 訂購","notify.international":"海外訂購(Amazon.com)","notify.contact":"聯繫作者","notify.instagram":"追蹤 Instagram",
       "notify.shareLabel":"分享此頁面","notify.shareCopy":"複製連結",
       "footer.copy":"© 2026 喬許・黃。供稿人:伊凡・奧克羅。"
     },
@@ -1071,7 +1039,7 @@
       "hero.tag":"Já disponível",
       "hero.subtitle":"Os diálogos de uma pessoa de terceira cultura consigo mesma e com os outros sobre identidade, pertencimento e o caminho a seguir.",
       "hero.byline":"Josh Wong · com o contributo de Ivan Okello",
-      "hero.preorder":"Peça agora na Amazon","hero.notify":"Avise-me no lançamento","hero.scroll":"Deslize",
+      "hero.preorder":"Peça agora na Amazon.ca","hero.international":"Pedidos internacionais (Amazon.com)","hero.scroll":"Deslize",
       "premise.eyebrow":"A pergunta que deu início a tudo","premise.heading":"Você sabe qual é o caminho?",
       "premise.photoCap":"St. John's, Terra Nova — onde tudo começou",
       "premise.p1":"O que começou como uma piada entre amigos acabou se tornando uma pergunta muito mais profunda: será que realmente sabemos qual é o \"caminho\" da vida?",
@@ -1100,10 +1068,8 @@
       "gallery.cap1":"Ilha de Qimei, Condado de Penghu — um açude de pedra em formato de coração","gallery.cap2":"Taipé ao entardecer","gallery.cap3":"Pôr do sol sobre Taipé",
       "gallery.cap4":"Um arco-íris em Sanzhi, Novo Taipé","gallery.cap5":"Praia de Fulong","gallery.cap6":"Praia de Fulong","gallery.cap7":"Ilha de Wan'an, Condado de Penghu","gallery.cap8":"Rotunda ferroviária de Changhua","gallery.cap9":"Pavilhão com vista para o mar de Jianshanjiao","ig.eyebrow":"No Instagram","ig.title":"Acompanhe",
       "notify.eyebrow":"Já disponível","notify.heading":"Peça agora, ou entre em contato.",
-      "notify.lead":"\"From an Island To an Island\" será lançado em 4 de setembro de 2026 como ebook e livro físico no Canadá. Peça agora, entre na lista para receber um aviso no lançamento, ou fale diretamente com Josh.",
-      "notify.button":"Entrar na lista",
-      "notify.thanks":"Obrigado — confira a nova aba que abriu para confirmar sua inscrição.",
-      "notify.preorder":"Peça agora na Amazon.ca","notify.contact":"Contatar o autor","notify.instagram":"Seguir no Instagram",
+      "notify.lead":"\"From an Island To an Island\" foi lançado em 4 de setembro de 2026 como ebook e livro físico no Canadá. Peça agora, ou fale diretamente com Josh.",
+      "notify.preorder":"Peça agora na Amazon.ca","notify.international":"Pedidos internacionais (Amazon.com)","notify.contact":"Contatar o autor","notify.instagram":"Seguir no Instagram",
       "notify.shareLabel":"Compartilhar esta página","notify.shareCopy":"Copiar link",
       "footer.copy":"© 2026 Josh Wong. Colaborador: Ivan Okello."
     },
@@ -1112,7 +1078,7 @@
       "hero.tag":"Disponible maintenant",
       "hero.subtitle":"Les dialogues d'un enfant de la troisième culture avec lui-même et avec les autres, sur l'identité, l'appartenance et le chemin à suivre.",
       "hero.byline":"Josh Wong · avec la contribution d'Ivan Okello",
-      "hero.preorder":"Commander sur Amazon","hero.notify":"Être averti à la sortie","hero.scroll":"Défiler",
+      "hero.preorder":"Commander sur Amazon.ca","hero.international":"Commandes internationales (Amazon.com)","hero.scroll":"Défiler",
       "premise.eyebrow":"La question à l'origine de tout","premise.heading":"Connais-tu le chemin ?",
       "premise.photoCap":"St. John's, Terre-Neuve — là où tout a commencé",
       "premise.p1":"Ce qui avait commencé comme une blague entre amis est devenu une question bien plus profonde : connaissons-nous vraiment le « chemin » de nos vies ?",
@@ -1141,10 +1107,8 @@
       "gallery.cap1":"Île de Qimei, comté de Penghu — un barrage de pierre en forme de cœur","gallery.cap2":"Taipei au crépuscule","gallery.cap3":"Coucher de soleil sur Taipei",
       "gallery.cap4":"Un arc-en-ciel à Sanzhi, Nouveau Taipei","gallery.cap5":"Plage de Fulong","gallery.cap6":"Plage de Fulong","gallery.cap7":"Île de Wan'an, comté de Penghu","gallery.cap8":"Rotonde ferroviaire de Changhua","gallery.cap9":"Pavillon panoramique de Jianshanjiao","ig.eyebrow":"Sur Instagram","ig.title":"Suivez-nous",
       "notify.eyebrow":"Disponible maintenant","notify.heading":"Commandez maintenant, ou prenez contact.",
-      "notify.lead":"« From an Island To an Island » sortira le 4 septembre 2026 en version numérique et papier au Canada. Commandez dès maintenant, inscrivez-vous à la liste, ou contactez Josh directement.",
-      "notify.button":"Rejoindre la liste",
-      "notify.thanks":"Merci — vérifiez le nouvel onglet ouvert pour confirmer votre inscription.",
-      "notify.preorder":"Commander sur Amazon.ca","notify.contact":"Contacter l'auteur","notify.instagram":"Suivre sur Instagram",
+      "notify.lead":"« From an Island To an Island » est sorti le 4 septembre 2026 en version numérique et papier au Canada. Commandez dès maintenant, ou contactez Josh directement.",
+      "notify.preorder":"Commander sur Amazon.ca","notify.international":"Commandes internationales (Amazon.com)","notify.contact":"Contacter l'auteur","notify.instagram":"Suivre sur Instagram",
       "notify.shareLabel":"Partager cette page","notify.shareCopy":"Copier le lien",
       "footer.copy":"© 2026 Josh Wong. Contributeur : Ivan Okello."
     }
@@ -1207,14 +1171,6 @@
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   const routeWrap = document.getElementById('routeWrap');
   if(routeWrap) observer.observe(routeWrap);
-
-  const form = document.getElementById('notifyForm');
-  const thanks = document.getElementById('notifyThanks');
-  form.addEventListener('submit', () => {
-    // Let the form actually submit to Mailchimp (opens in a new tab);
-    // just show a quick confirmation note on this page too.
-    thanks.style.display = 'block';
-  });
 
   // Share links — built from wherever this page actually ends up hosted.
   const shareUrl = encodeURIComponent(window.location.href);
