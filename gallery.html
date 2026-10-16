@@ -595,6 +595,15 @@
   body.subpage header.nav{background:rgba(22,35,43,0.95); padding:0.9rem clamp(1.2rem,5vw,3.5rem);}
   body.subpage .gallery{padding-top:clamp(6rem,12vw,8rem);}
   header.nav nav a.current{color:var(--gold); opacity:1;}
+
+  .order-picker{position:relative; display:inline-block;}
+  .order-picker summary{list-style:none; cursor:pointer;}
+  .order-picker summary::-webkit-details-marker{display:none;}
+  .order-menu{position:absolute; left:0; top:calc(100% + 6px); z-index:20; min-width:260px; background:var(--harbor-deep); border:1px solid var(--slate); border-radius:4px; padding:.4rem; box-shadow:0 12px 30px rgba(0,0,0,.35); text-align:left;}
+  .order-menu a{display:flex; justify-content:space-between; gap:1rem; padding:.7rem .8rem; min-height:44px; align-items:center; color:var(--fog); text-decoration:none; font-size:.9rem; border-radius:3px; touch-action:manipulation;}
+  .order-menu a span{opacity:.6; font-family:'IBM Plex Mono',monospace; font-size:.75rem;}
+  @media (hover:hover) and (pointer:fine){.order-menu a:hover{background:rgba(224,168,78,.15); color:var(--gold);}}
+  .notify .order-menu{left:50%; transform:translateX(-50%);}
 </style>
 </head>
 <body class="subpage">
@@ -721,7 +730,7 @@
 
     <div class="cta-row" style="justify-content:center; margin-top:1.8rem;">
       <a href="https://www.amazon.ca/dp/B0HDSDGK76" target="_blank" rel="noopener" class="btn btn-ghost" data-i18n="notify.preorder">Order Now on Amazon.ca</a>
-      <a href="https://www.amazon.com/dp/1068007605" target="_blank" rel="noopener" class="btn btn-ghost" data-i18n="notify.international">International Orders (Amazon.com)</a>
+      <details class="order-picker"><summary class="btn btn-ghost "><span data-i18n="order.other">Other Amazon stores</span> ▾</summary><div class="order-menu"><a href="https://www.amazon.com/dp/1068007605" target="_blank" rel="noopener">United States <span>amazon.com</span></a><a href="https://www.amazon.co.uk/dp/1068007605" target="_blank" rel="noopener">United Kingdom <span>amazon.co.uk</span></a><a href="https://www.amazon.de/dp/1068007605" target="_blank" rel="noopener">Germany <span>amazon.de</span></a><a href="https://www.amazon.fr/dp/1068007605" target="_blank" rel="noopener">France <span>amazon.fr</span></a><a href="https://www.amazon.es/dp/1068007605" target="_blank" rel="noopener">Spain <span>amazon.es</span></a><a href="https://www.amazon.it/dp/1068007605" target="_blank" rel="noopener">Italy <span>amazon.it</span></a><a href="https://www.amazon.com.au/dp/1068007605" target="_blank" rel="noopener">Australia <span>amazon.com.au</span></a><a href="https://www.amazon.co.jp/dp/1068007605" target="_blank" rel="noopener">Japan <span>amazon.co.jp</span></a></div></details>
       <a href="mailto:tckauthorjosh@gmail.com?subject=Hello%20Josh" class="btn btn-ghost" data-i18n="notify.contact">Contact the author</a>
       <a href="https://www.instagram.com/buddyoverder/" target="_blank" rel="noopener" class="btn btn-instagram">
         <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
@@ -750,9 +759,9 @@
 <script>
   const translations = {
     en: {
-      "nav.home":"Home","teaser.eyebrow":"Gallery & Reels","teaser.title":"See the road, and the reels.","teaser.btn":"Open the gallery →",
+      "order.other":"Other Amazon stores","nav.home":"Home","teaser.eyebrow":"Gallery & Reels","teaser.title":"See the road, and the reels.","teaser.btn":"Open the gallery →",
       "nav.premise":"Premise","nav.excerpt":"Excerpt","nav.journey":"The Journey","nav.author":"Author","nav.gallery":"Gallery","nav.notify":"Get notified",
-      "hero.tag":"Out Now",
+      "hero.tag":"Available on Amazon",
       "hero.subtitle":"A third-culture kid's dialogues with self and others on identity, belonging, and the way forward.",
       "hero.byline":"Josh Wong · with contributor Ivan Okello",
       "hero.preorder":"Order Now on Amazon.ca","hero.international":"International Orders (Outside of Canada)","hero.scroll":"Scroll",
@@ -790,9 +799,9 @@
       "footer.copy":"© 2026 Josh Wong. Contributor: Ivan Okello."
     },
     zh: {
-      "nav.home":"首頁","teaser.eyebrow":"圖庫與短片","teaser.title":"看看旅途與短片。","teaser.btn":"前往圖庫 →",
+      "order.other":"其他 Amazon 站點","nav.home":"首頁","teaser.eyebrow":"圖庫與短片","teaser.title":"看看旅途與短片。","teaser.btn":"前往圖庫 →",
       "nav.premise":"緣起","nav.excerpt":"節錄","nav.journey":"旅程","nav.author":"作者","nav.gallery":"相片集","nav.notify":"搶先收到通知",
-      "hero.tag":"現已上市",
+      "hero.tag":"已於 Amazon 上架",
       "hero.subtitle":"一位第三文化孩子與自己對話,也與他人對話——談身分認同、歸屬感,以及未來的方向。",
       "hero.byline":"Josh Wong 著,與供稿人 Ivan Okello",
       "hero.preorder":"立即在 Amazon.ca 訂購","hero.international":"海外訂購(Amazon.com)","hero.scroll":"向下捲動",
@@ -830,9 +839,9 @@
       "footer.copy":"© 2026 喬許・黃。供稿人:伊凡・奧克羅。"
     },
     pt: {
-      "nav.home":"Início","teaser.eyebrow":"Galeria e Reels","teaser.title":"Veja a estrada e os reels.","teaser.btn":"Abrir a galeria →",
+      "order.other":"Outras lojas Amazon","nav.home":"Início","teaser.eyebrow":"Galeria e Reels","teaser.title":"Veja a estrada e os reels.","teaser.btn":"Abrir a galeria →",
       "nav.premise":"Premissa","nav.excerpt":"Trecho","nav.journey":"A Jornada","nav.author":"Autor","nav.gallery":"Galeria","nav.notify":"Avise-me",
-      "hero.tag":"Já disponível",
+      "hero.tag":"Disponível na Amazon",
       "hero.subtitle":"Os diálogos de uma pessoa de terceira cultura consigo mesma e com os outros sobre identidade, pertencimento e o caminho a seguir.",
       "hero.byline":"Josh Wong · com o contributo de Ivan Okello",
       "hero.preorder":"Peça agora na Amazon.ca","hero.international":"Pedidos internacionais (Amazon.com)","hero.scroll":"Deslize",
@@ -870,9 +879,9 @@
       "footer.copy":"© 2026 Josh Wong. Colaborador: Ivan Okello."
     },
     fr: {
-      "nav.home":"Accueil","teaser.eyebrow":"Galerie et Reels","teaser.title":"Voyez la route et les reels.","teaser.btn":"Ouvrir la galerie →",
+      "order.other":"Autres boutiques Amazon","nav.home":"Accueil","teaser.eyebrow":"Galerie et Reels","teaser.title":"Voyez la route et les reels.","teaser.btn":"Ouvrir la galerie →",
       "nav.premise":"Prémisse","nav.excerpt":"Extrait","nav.journey":"Le voyage","nav.author":"Auteur","nav.gallery":"Galerie","nav.notify":"Être averti",
-      "hero.tag":"Disponible maintenant",
+      "hero.tag":"Disponible sur Amazon",
       "hero.subtitle":"Les dialogues d'un enfant de la troisième culture avec lui-même et avec les autres, sur l'identité, l'appartenance et le chemin à suivre.",
       "hero.byline":"Josh Wong · avec la contribution d'Ivan Okello",
       "hero.preorder":"Commander sur Amazon.ca","hero.international":"Commandes internationales (Amazon.com)","hero.scroll":"Défiler",
@@ -989,5 +998,9 @@
 <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/16abddba806fd17a474812f2f/119a104e0bf4ab3741803fa48.js");</script>
 <script async src="//www.instagram.com/embed.js"></script>
 
+<script>
+  document.addEventListener('click',e=>{document.querySelectorAll('.order-picker[open]').forEach(d=>{if(!d.contains(e.target))d.removeAttribute('open');});});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.order-picker[open]').forEach(d=>d.removeAttribute('open'));});
+</script>
 </body>
 </html>
